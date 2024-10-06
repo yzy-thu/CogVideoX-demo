@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Video Text</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .video-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .video-container {
+            position: relative;
+            margin: 0 10px; /* 给视频之间加一点间距 */
+        }
+        video {
+            width: 500px; /* 设置每个视频的宽度 */
+            height: auto;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* 半透明的背景 */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 24px;
+            text-align: center;
+        }
+        .video-container:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Row 1 with multiple videos -->
+    <div class="video-row">
+        <div class="video-container">
+            <video src="1.mp4" autoplay muted loop></video>
+            <div class="overlay">Video 1: The story of a robot's life in a cyberpunk setting.</div>
+        </div>
+        <div class="video-container">
+            <video src="2.mp4" autoplay muted loop></video>
+            <div class="overlay">Video 2: Another chapter in the robot's journey.</div>
+        </div>
+        <div class="video-container">
+            <video src="3.mp4" autoplay muted loop></video>
+            <div class="overlay">Video 3: Exploring the dystopian cityscape.</div>
+        </div>
+    </div>
+
+    <!-- Row 2 with multiple videos -->
+    <div class="video-row">
+        <div class="video-container">
+            <video src="1.mp4" autoplay muted loop></video>
+            <div class="overlay">Video 4: A critical moment in the robot's evolution.</div>
+        </div>
+        <div class="video-container">
+            <video src="2.mp4" autoplay muted loop></video>
+            <div class="overlay">Video 5: A fight for survival in the cyber world.</div>
+        </div>
+        <div class="video-container">
+            <video src="3.mp4" autoplay muted loop></video>
+            <div class="overlay">Video 6: The future of AI in a chaotic society.</div>
+        </div>
+    </div>
+
+</body>
+</html>
