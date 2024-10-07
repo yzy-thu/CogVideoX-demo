@@ -1,80 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hover Video Text</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .video-row {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .video-container {
-            position: relative;
-            margin: 0 10px; /* 给视频之间加一点间距 */
-        }
-        video {
-            width: 500px; /* 设置每个视频的宽度 */
-            height: auto;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6); /* 半透明的背景 */
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            font-size: 24px;
-            text-align: center;
-        }
-        .video-container:hover .overlay {
-            opacity: 1;
-        }
-    </style>
-</head>
-<body>
-
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>响应式视频行</title>
+            <style>
+                body {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 0;
+                    padding: 0;
+                }
+                .video-row {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    width: 100%;
+                }
+                .video-container {
+                    position: relative;
+                    flex: 1 1 300px; /* 可以根据需要调整最小宽度 */
+                    margin: 5px;
+                }
+                .video-container video {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.6); /* 半透明的背景 */
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    font-size: 24px;
+                    text-align: center;
+                }
+                .video-container:hover .overlay {
+                    opacity: 1;
+                }
+            </style>
+        </head>
+        <body>
+    <!-- <div class="video-container">
+        <video src="1.mp4" autoplay muted loop></video>
+        <div class="overlay">Video 1: The story of a robot's life in a cyberpunk setting.</div>
+    </div> -->
     <!-- Row 1 with multiple videos -->
+    <h1>CogVideoX-5B</h1>
     <div class="video-row">
         <div class="video-container">
-            <video src="1.mp4" autoplay muted loop></video>
-            <div class="overlay">Video 1: The story of a robot's life in a cyberpunk setting.</div>
+            <video src="6.mp4" autoplay muted loop></video>
         </div>
         <div class="video-container">
-            <video src="2.mp4" autoplay muted loop></video>
-            <div class="overlay">Video 2: Another chapter in the robot's journey.</div>
+            <video src="15.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+    <div class="video-row">
+        <div class="video-container">
+            <video src="53.mp4" autoplay muted loop></video>
         </div>
         <div class="video-container">
-            <video src="3.mp4" autoplay muted loop></video>
-            <div class="overlay">Video 3: Exploring the dystopian cityscape.</div>
+            <video src="36.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+    <div class="video-row">
+        <div class="video-container">
+            <video src="73.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="43.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+
+
+    <div class="video-row">
+        <div class="video-container">
+            <video src="55.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="23.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="34.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+    <div class="video-row">
+        <div class="video-container">
+            <video src="100.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="101.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="102.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="103.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+
+    <div class="video-row">
+        <div class="video-container">
+            <video src="104.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="105.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="106.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="107.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+    <h2>Image-to-Video</h2>
+    <div class="video-row">
+        <div class="video-container">
+            <video src="108.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="109.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="110.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="111.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+    <div class="video-row">
+        <div class="video-container">
+            <video src="112.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="113.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="114.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video-container">
+            <video src="115.mp4" autoplay muted loop></video>
         </div>
     </div>
 
     <!-- Row 2 with multiple videos -->
+    <h1>CogVideoX-2B</h1>
     <div class="video-row">
         <div class="video-container">
             <video src="1.mp4" autoplay muted loop></video>
-            <div class="overlay">Video 4: A critical moment in the robot's evolution.</div>
         </div>
         <div class="video-container">
             <video src="2.mp4" autoplay muted loop></video>
-            <div class="overlay">Video 5: A fight for survival in the cyber world.</div>
         </div>
         <div class="video-container">
             <video src="3.mp4" autoplay muted loop></video>
-            <div class="overlay">Video 6: The future of AI in a chaotic society.</div>
         </div>
     </div>
 
